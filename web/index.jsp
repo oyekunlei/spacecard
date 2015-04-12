@@ -114,10 +114,8 @@
 	    </div>
 	    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	  </div>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/smoothscroll.js"></script>
-	  <script>
-	    $(document).foundation();
-	  </script>
+
+		<jsp:include page="partials/scripts.jsp" />
+
 	</body>
 </html>

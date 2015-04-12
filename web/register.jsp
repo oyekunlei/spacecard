@@ -12,36 +12,38 @@
 		<jsp:include page="partials/header.jsp" />
     <div class="container section-wrapper">
       <div class='col-md-4 col-md-offset-4'>
-        <form action="login.go" method='post'>
+        <form action="register.go" method='post' id="signup-form">
           <div class='form-group'>
             <label for='name'>Full name</label>
-            <input class='form-control' id='name' name='name' placeholder='Enter full name' type='text'>
+            <input class='form-control' id='name' name='txtName' placeholder='Enter full name' type='text' required>
           </div>
           <div class='form-group'>
             <label for='email'>Email</label>
-            <input class='form-control' id='email' name='email' placeholder='Enter your email' type='text'>
+            <input class='form-control' id='email' name='txtEmail' placeholder='Enter your email' type='email' required>
+          </div>
+          <div class='form-group'>
+            <label for='username'>Username</label>
+            <input class='form-control' id='username' name='txtUsername' placeholder='Enter username' type='text' required>
           </div>
           <div class='form-group'>
             <label for='password'>Password</label>
-            <input class='form-control' id='password' name='password' placeholder='Enter Password' type='password'>
+            <input class='form-control' id='password' name='password' placeholder='Enter Password' type='password' required>
           </div>
-          <button class='btn btn-primary' type='submit'>Log In</button>
-          <p class='pull-right'><a href="/new_password">forgot your password?</a></p>
+          <div class='form-group'>
+            <label for='picturepath'>Profile picture</label>
+            <input name="picturepath" id="picturepath" type="file" class="file">
+          </div>
+          <button class='btn btn-primary' type='submit' name="select">Sign Up</button>
+          <p class='pull-right'><a href="login.jsp">Have an existing account? Log in</a></p>
         </form>
       </div>
     </div>
+
+    <jsp:include page="partials/scripts.jsp" />
+
+    <script>
+      $("#signup-form").validate();
+    </script>
+
   </body>
 </html>
-
-<form action = "register.go" method="POST">
-    <fieldset>
-        <legend>Register your account</legend>
-<input type = "text" name ="txtName" id ="name" placeholder="Name" /><br /><br />
-<input type = "text" name ="txtEmail" id ="email" placeholder="Email" /><br /><br />
-<input type = "text" name ="txtUsername" id ="username" placeholder="Username" /><br /><br />
-        <input type = "password" name ="txtPassword" id ="password" placeholder="Password" /><br /><br />
-<input type = "text" name ="picturepath" id ="picturepath" /><br /><br />
-        <input type = "submit" name = "select" value = "Register"/>
-
-    </fieldset>
-</form>
