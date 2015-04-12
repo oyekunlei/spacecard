@@ -22,9 +22,9 @@
               if (images != null) {
                 for (Image image : images) {
           %>
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" style="margin-bottom: 20px;">
             <div class="thumbnail">
-              <img src="<%=image.getPath()%>" alt="...">
+              <img src="<%=image.getPath()%>" class="img-responsive" style="height:250px;">
               <div class="caption">
                 <p><%=image.getDescription()%></p>
                 <p><a href="#" class="btn btn-primary" role="button">Create Postcard</a></p>
