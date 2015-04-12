@@ -27,13 +27,13 @@
           </div>
           <div class='form-group'>
             <label for='password'>Password</label>
-            <input class='form-control' id='password' name='password' placeholder='Enter Password' type='password' required>
+            <input class='form-control' id='password' name='txtPassword' placeholder='Enter Password' type='password' required>
           </div>
           <div class='form-group'>
             <label for='picturepath'>Profile picture</label>
             <input name="picturepath" id="picturepath" type="file" class="file">
           </div>
-          <button class='btn btn-primary' type='submit' name="select">Sign Up</button>
+          <input type="submit" class="btn btn-primary" name="select" value="Register"/>
           <p class='pull-right'><a href="login.jsp">Have an existing account? Log in</a></p>
         </form>
       </div>

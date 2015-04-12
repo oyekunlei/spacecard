@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : imageGallery
     Created on : Apr 12, 2015, 8:52:49 AM
     Author     : user
@@ -9,39 +9,33 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Image Gallery</title>
-       <!-- <style> 
-            img {
-                width: 100px;
-                height: 100%;
-            }
-        </style>-->
-    </head>
+  <jsp:include page="partials/head.jsp" />
 
+  <body>
+    <jsp:include page="partials/header.jsp" />
     <body>
- <form>
-            <h1>Please select from one up to 3 pictures you would like to customize and click proceed</h1>
-            <table width="100%" border="1">   
-                <tr><td>Select</td><td>Image</td><td>Descriptions</td></tr>
-<%
-    Vector<Image> images = (Vector<Image>) session.getAttribute("Images");
-    if (images != null) {
-        for (Image image : images) {
-%>
-        
-                <tr>
-                    <td><input type ="checkbox" value = "<%=image.getImageId()%>" name = "select"/></td>
-                    <td><img src = "<%=image.getPath()%>" /> </td>
-                    <td><p><%=image.getDescription()%></p></td>
-                </tr>
-<%
-        }
-    }
-%>               
-            </table>
-                <br><input type ="submit" value ="Proceed" name="select" />
-        </form>
+      <div class="container section-wrapper">
+        <h3>Please select from one up to 3 pictures you would like to customize and click proceed</h3>
+        <div class="row">
+          <%
+              Vector<Image> images = (Vector<Image>) session.getAttribute("Images");
+              if (images != null) {
+                for (Image image : images) {
+          %>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="<%=image.getPath()%>" alt="...">
+              <div class="caption">
+                <p><%=image.getDescription()%></p>
+                <p><a href="#" class="btn btn-primary" role="button">Create Postcard</a></p>
+              </div>
+            </div>
+          </div>
+          <%
+              }
+            }
+          %>
+        </div>
+      </div>
     </body>
 </html>

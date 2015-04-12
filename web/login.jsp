@@ -22,7 +22,8 @@
               <label for='password'>Password</label>
               <input class='form-control' id='password' name='password' placeholder='Password' type='password' required>
             </div>
-            <button class='btn btn-primary' type='submit'>Log In</button>
+            <input type="submit" name="select" value="Login"/>
+            <%-- <button class='btn btn-primary' type='submit'>Log In</button> --%>
             <p class='pull-right'><a href="new_password.jsp">forgot your password?</a></p>
           </form>
         </div>
