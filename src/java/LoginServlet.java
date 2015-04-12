@@ -2,6 +2,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import com.spacecard.dao.LoginDAO;
+import com.spacecard.dao.ProfileDAO;
 import com.spacecard.profile.Profile;
 import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
@@ -34,8 +35,12 @@ public class LoginServlet extends HttpServlet
 				if(profile != null)
 				{
 					HttpSession session = request.getSession(true);
-					session.setAttribute("User", profile);
+                                        ProfileDAO dao = new ProfileDAO();
+                                        dao.openConnection(usn, psw, url);
+                                        profile = dao.getProfile(profile.getUserId());
+                                        session.setAttribute("User", profile);
 					response.sendRedirect("myspace.jsp");
+                                        dao.closeConnection();
 				}
 				else
 				{
@@ -57,6 +62,7 @@ public class LoginServlet extends HttpServlet
 			try
 			{
 				loginDAO.closeConnection();
+                                
 			}
 			catch(Exception er)
 			{
