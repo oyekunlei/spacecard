@@ -19,9 +19,6 @@
 			<link rel="stylesheet" href="css/foundation.css" />
                         <link rel="stylesheet" href="css/profile.css" />
 			<script src="../js/vendor/modernizr.js"></script>
-			<style>
-				
-			</style>
     </head>
     <body>
         <nav class="top-bar" data-topbar="">
