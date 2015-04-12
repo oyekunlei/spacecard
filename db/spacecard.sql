@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 12, 2015 at 02:08 AM
+-- Generation Time: Apr 12, 2015 at 10:48 AM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -65,6 +65,43 @@ CREATE TABLE IF NOT EXISTS `friend` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `image`
+--
+
+CREATE TABLE IF NOT EXISTS `image` (
+  `imageId` int(11) NOT NULL AUTO_INCREMENT,
+  `description` text NOT NULL,
+  `category` varchar(20) NOT NULL,
+  `path` varchar(255) NOT NULL,
+  PRIMARY KEY (`imageId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
+--
+-- Dumping data for table `image`
+--
+
+INSERT INTO `image` (`imageId`, `description`, `category`, `path`) VALUES
+(1, 'A gaze at the earth', 'planets', 'images/earth.jpg'),
+(2, 'Saturn Eclipse_15 September 2006', 'planets', 'images/saturn.jpg'),
+(3, 'A magnificent view of the galaxy_1990', 'galaxy', 'images/sombgalaxy.jpg'),
+(4, 'A dying star_Helix Nebula', 'stars', 'images/helixnebula.jpg'),
+(5, 'A butterfly-like nebula', 'stars', 'images/butterflynebula.jpg'),
+(6, 'Galatic gathering_2014', 'galaxy', 'images/gathgalaxy.jpg'),
+(7, 'Beautiful galaxy cluster', 'galaxy', 'images/clustgalaxy.jpg'),
+(8, 'An amazing view of Jupiter and Saturn', 'planets', 'images/jupsat.jpg'),
+(9, 'Another magnificent nebula_2006', 'stars', 'images/nebula.jpg'),
+(10, 'A nice shot at a nova', 'stars', 'images/nova.jpg'),
+(11, 'Outer Space', 'galaxy', 'images/outer.jpg'),
+(12, 'A WOW view at the outer space', 'planets', 'images/outer2.jpg'),
+(13, 'Astronaut chilling on the moon', 'astronaut', 'images/astronaut.jpg'),
+(14, 'Astronaut walking on the moon', 'astronaut', 'images/astronaut2.jpg'),
+(15, 'WOW dark sky', 'sky', 'images/sky.jpg'),
+(16, 'WOW sky', 'sky', 'images/sky2.jpg'),
+(17, 'WOW Sky', 'sky', 'images/sky3.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `postcard`
 --
 
@@ -112,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `Status` varchar(20) NOT NULL DEFAULT 'Ok',
   `DateRegistered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`UserId`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `user`
@@ -125,7 +162,8 @@ INSERT INTO `user` (`UserId`, `Username`, `Email`, `Password`, `FullName`, `Prof
 (4, 'pertuniamolope', 'pertuniamolope@yahoo.com', '123456789', 'Pertunia Molope', 'default.png', 'Ok', '2015-04-11 18:15:39'),
 (5, 'babytshigeng', 'babytshigeng@yahoo.com', '123456789', 'Baby Tshigeng', 'default.png', 'Ok', '2015-04-11 18:15:39'),
 (6, 'abiolaadeola', 'abiolaadeola@yahoo.com', '123456789', 'Abiola', 'default.png', 'Ok', '2015-04-11 23:49:55'),
-(7, 'tinky', 'twkky@yahoo.com', '123456789', 'Tinky Winky', 'default.png', 'Ok', '2015-04-11 23:57:39');
+(7, 'tinky', 'twkky@yahoo.com', '123456789', 'Tinky Winky', 'default.png', 'Ok', '2015-04-11 23:57:39'),
+(8, 'innov', 'emymb@yahoo.com', 'famille', 'Marie', '', 'Ok', '2015-04-12 10:05:13');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
