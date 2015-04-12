@@ -22,10 +22,11 @@
               <label for='password'>Password</label>
               <input class='form-control' id='password' name='password' placeholder='Password' type='password' required>
             </div>
-            <input type="submit" name="select" value="Login"/>
+            <input type="submit" class='btn btn-primary' name="select" value="Login"/>
             <%-- <button class='btn btn-primary' type='submit'>Log In</button> --%>
             <p class='pull-right'><a href="new_password.jsp">forgot your password?</a></p>
           </form>
+          <p class='pull-right'><a href="register.jsp">Create an account</a></p>
         </div>
       </div>
     </div>
