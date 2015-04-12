@@ -56,6 +56,7 @@
 		</div>
 		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 		</div>
+                <a href = "ImageServlet?select=View All Images">View All Images</a>
 		<script src="../js/vendor/jquery.js"></script>
 		<script src="../js/foundation.min.js"></script>
 		<script>
